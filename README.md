@@ -1,6 +1,5 @@
 # Chess-2D
-The Chess-2D is a multiplayer,chance based, strategy game which runs smoothly on a 1920X1080 Screen for now.Its roughly a 
-5Mb game
+The Chess-2D is a multiplayer,chance based, strategy game which runs smoothly on a 1920X1080 Screen for now.
 
 >**NOTE:_The Image on the background of The Main Menu is created by me in Blender._**
 
