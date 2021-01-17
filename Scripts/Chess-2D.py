@@ -11,7 +11,7 @@
 from tkinter import *
 from tkinter import messagebox
 import pygame
-import os
+import sys
 checkwho=[]                          #Indices of pieces that check the King(Global declaration)
 castle={'W':[0,0,0],'B':[0,0,0]}     #Flags for castling(Global declaration)
 kill_list={'W':[],'B':[]}             #Killed pieces(Global declaration)
@@ -317,7 +317,7 @@ def borw(a):                         #Letting user known of the colour selected 
     else:
         return("White")
 def chance(ch) :                     #Comprehending black or white turn
-    if(ch%2 is not 0):
+    if(ch%2 != 0):
         return('W')
     else:
         return('B')
@@ -621,7 +621,7 @@ pygame.init()
 black = (0,0,0)                                                                                     #Black colour assignment
 clock = pygame.time.Clock()
 white=(255,255,255)
-screen = pygame.display.set_mode((1080,1080))
+screen = pygame.display.set_mode((1550,801))
 pygame.display.set_caption("Chess")
 icon = pygame.image.load("Assets/chess.png")
 pygame.display.set_icon(icon)
@@ -749,7 +749,7 @@ castle_sound=pygame.mixer.Sound("Assets/castle.wav")
 ch=["B","W"]
 import random as r
 p1=r.choice(ch)                       #Random assignment of Black or White on player 1
-p2=[i for i in ch if i  is not p1]
+p2=[i for i in ch if i != p1]
 p2=p2[0]                              #Assignment of Black or White on player 2
 sixteen=0                             #Sixteen Chance Mate counter
 while(1):
@@ -834,7 +834,7 @@ while(1):
                                 Tk().wm_withdraw() #to hide the main window
                                 promote=Promote(one,'Pawn Promotion','Pawn can be promoted to:\n')
                                 promote.destroy()
-                            if(temp is not '  '):
+                            if(temp != '  '):
                                 kill_list[two].append(temp)
                                 taken_sound.play()
                             else:
